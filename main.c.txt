@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <conio.h>
+#include <math.h>
 
 
 int main(){
 
-printf("Hello World");
+float a=0.234;
 
+printf("%f",sin(a));
 getch();
 
 return 0;
