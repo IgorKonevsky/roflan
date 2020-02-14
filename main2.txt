@@ -1,0 +1,38 @@
+org 0x100
+
+mov ax, 3
+mov bx, 3
+mov cx, 0
+
+
+cmp ax, bx
+
+js metka1
+jnz metka2
+
+while
+add cx,bx
+dec ax
+jnz while
+add cx,cx
+add cx,2
+ret
+
+metka1
+while1
+add cx,bx
+dec ax
+jnz while1
+add cx,bx
+dec cx
+ret
+
+
+metka2
+while2
+add cx,bx
+dec ax
+jnz while2
+add cx,cx
+inc cx
+ret
