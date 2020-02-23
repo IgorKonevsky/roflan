@@ -1,22 +1,42 @@
-<?php
+	<?php
 
-class Reverse{
+	class Testing{
+		private $num;
+		function __construct($num){
+			$this->num=$num;
+		}
+		
+		function mult(){
+			if($this -> num<10){
+				echo '0';
+				return 0;
+			}
 
-	public function example1($str){
-		$l=strlen($str);
-		/*$m;
-		for($i=$l; $i>=0; $i--){
-			$str[$i] = $m[$l-$i];
-		}*/
-		echo $str;
+			$val=(string)$this -> num;
+			$sum=1;
+			$count=0;
+			while(true){
+
+				for($i = 0; $i < strlen($val); $i++){
+					$sum *= $val[$i];
+				}
+				$count++;
+				if($sum<10)
+					break;
+				$val=(string)$sum;
+				$sum=1;
+			}
+			echo "$sum,\n$count";
+			
+		}
+
 	}
-}
 
-$obj1 = new Reverse();
-$obj1 -> example1("qwerty");
-
+	$myobj = new Testing("1");
+	$myobj -> mult();
 
 
 
 
-?>
+
+	?>
