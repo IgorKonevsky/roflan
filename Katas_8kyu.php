@@ -1,6 +1,6 @@
 <?php
 
-class Katas_8kyu{
+class Katas{
 	function rowSumOddNumbers($n) {
 		$count=1;
 		$num=1;
@@ -60,13 +60,44 @@ class Katas_8kyu{
 				unset($s[$i]);
 				$j = $i;
 				while($j==' ') $j++;
-				$s[
+				$s;
 				}
 			}
 			$s = implode($s);
 			return $s;
 
 		}
+
+	function nb_Year($p0, $percent, $aug, $p) {
+            $c_p = $p0;
+            $count=0;
+            while($c_p < $p){
+                $c_p *= 1+($percent/100);
+                $c_p += $aug;
+                $count++;
+            }
+            
+            return $count;
+            
+            
+            
+        }
+        function sumArray($array) {
+            $min=99999;
+            $max=-99999;
+            $c=0;
+            for($i = 0; $i < count($array); $i++){
+                if($array[$i] < $min) $min = $array[$i];
+                if($array[$i] > $max) $max = $array[$i];
+                $c+=$array[$i];
+                
+                
+            }
+            $c-=$min;
+            $c-=$max;
+            return $c;
+            
+        }
 	}
 
 
